@@ -1,0 +1,19 @@
+[package]
+name = "stm32f4x-blinky-rs"
+version = "0.1.0"
+authors = ["Massimiliano Torromeo <massimiliano.torromeo@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+cortex-m = "0.6.3"
+panic-halt = "0.2.0"
+cortex-m-rt = "0.6.13"
+
+[dependencies.stm32f4xx-hal]
+version = "0.8.3"
+features = ["stm32f401"]
+
+[profile.release]
+codegen-units = 1
+debug = true
+lto = true
